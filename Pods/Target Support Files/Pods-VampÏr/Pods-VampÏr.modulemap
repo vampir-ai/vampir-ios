@@ -1,0 +1,6 @@
+framework module Pods_VampI_r {
+  umbrella header "Pods-VampÏr-umbrella.h"
+
+  export *
+  module * { export * }
+}

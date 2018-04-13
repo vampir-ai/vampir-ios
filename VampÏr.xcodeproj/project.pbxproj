@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F52F7022080F2710039DC5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52F7012080F2710039DC5B /* AppDelegate.swift */; };
+		1F52F7042080F2710039DC5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52F7032080F2710039DC5B /* ViewController.swift */; };
+		1F52F7072080F2710039DC5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F52F7052080F2710039DC5B /* Main.storyboard */; };
+		1F52F70A2080F2710039DC5B /* VampI_r.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F52F7082080F2710039DC5B /* VampI_r.xcdatamodeld */; };
+		1F52F70C2080F2730039DC5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F52F70B2080F2730039DC5B /* Assets.xcassets */; };
+		1F52F70F2080F2730039DC5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F52F70D2080F2730039DC5B /* LaunchScreen.storyboard */; };
+		1F52F7192080F6D00039DC5B /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52F7182080F6D00039DC5B /* SignUpVC.swift */; };
+		1F52F71B2080F72A0039DC5B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52F71A2080F72A0039DC5B /* LoginVC.swift */; };
+		1F52F71D2081042B0039DC5B /* vampir-full-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F52F71C2081042B0039DC5B /* vampir-full-logo.png */; };
+		1F52F71F2081147C0039DC5B /* LinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52F71E2081147C0039DC5B /* LinkVC.swift */; };
+		1F52F72120811E700039DC5B /* DexSignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52F72020811E700039DC5B /* DexSignInVC.swift */; };
+		1F52F723208123CF0039DC5B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52F722208123CF0039DC5B /* Extensions.swift */; };
+		1F52F726208131E40039DC5B /* GraphVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52F725208131E40039DC5B /* GraphVC.swift */; };
+		1F52F72C208144C70039DC5B /* Pods_VampI_r.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F52F72B208144C70039DC5B /* Pods_VampI_r.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F52F6FE2080F2710039DC5B /* VampÏr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VampÏr.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F52F7012080F2710039DC5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F52F7032080F2710039DC5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F52F7062080F2710039DC5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F52F7092080F2710039DC5B /* VampI_r.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VampI_r.xcdatamodel; sourceTree = "<group>"; };
+		1F52F70B2080F2730039DC5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F52F70E2080F2730039DC5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F52F7102080F2730039DC5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F52F7182080F6D00039DC5B /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		1F52F71A2080F72A0039DC5B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		1F52F71C2081042B0039DC5B /* vampir-full-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vampir-full-logo.png"; sourceTree = "<group>"; };
+		1F52F71E2081147C0039DC5B /* LinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkVC.swift; sourceTree = "<group>"; };
+		1F52F72020811E700039DC5B /* DexSignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexSignInVC.swift; sourceTree = "<group>"; };
+		1F52F722208123CF0039DC5B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1F52F725208131E40039DC5B /* GraphVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphVC.swift; sourceTree = "<group>"; };
+		1F52F727208144460039DC5B /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F52F72B208144C70039DC5B /* Pods_VampI_r.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_VampI_r.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2055087800B15D401D0AEE8D /* Pods-VampÏr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VampÏr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VampÏr/Pods-VampÏr.debug.xcconfig"; sourceTree = "<group>"; };
+		42FBB172F3D0FA6B4C6350C1 /* Pods_VampI_r.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VampI_r.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		728804B17891E87D75F0370F /* Pods-VampÏr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VampÏr.release.xcconfig"; path = "Pods/Target Support Files/Pods-VampÏr/Pods-VampÏr.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F52F6FB2080F2710039DC5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F52F72C208144C70039DC5B /* Pods_VampI_r.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F52F6F52080F2710039DC5B = {
+			isa = PBXGroup;
+			children = (
+				1F52F727208144460039DC5B /* Charts.framework */,
+				1F52F7002080F2710039DC5B /* VampÏr */,
+				1F52F6FF2080F2710039DC5B /* Products */,
+				B4DEB4CE8516A6529F0DDB46 /* Pods */,
+				DB6A555868E9845195CFD223 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1F52F6FF2080F2710039DC5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F52F6FE2080F2710039DC5B /* VampÏr.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F52F7002080F2710039DC5B /* VampÏr */ = {
+			isa = PBXGroup;
+			children = (
+				1F52F7012080F2710039DC5B /* AppDelegate.swift */,
+				1F52F7032080F2710039DC5B /* ViewController.swift */,
+				1F52F7052080F2710039DC5B /* Main.storyboard */,
+				1F52F70B2080F2730039DC5B /* Assets.xcassets */,
+				1F52F71C2081042B0039DC5B /* vampir-full-logo.png */,
+				1F52F70D2080F2730039DC5B /* LaunchScreen.storyboard */,
+				1F52F722208123CF0039DC5B /* Extensions.swift */,
+				1F52F7102080F2730039DC5B /* Info.plist */,
+				1F52F7082080F2710039DC5B /* VampI_r.xcdatamodeld */,
+				1F52F724208131BA0039DC5B /* ViewControllers */,
+			);
+			path = "VampÏr";
+			sourceTree = "<group>";
+		};
+		1F52F724208131BA0039DC5B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F52F7182080F6D00039DC5B /* SignUpVC.swift */,
+				1F52F71E2081147C0039DC5B /* LinkVC.swift */,
+				1F52F71A2080F72A0039DC5B /* LoginVC.swift */,
+				1F52F72020811E700039DC5B /* DexSignInVC.swift */,
+				1F52F725208131E40039DC5B /* GraphVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B4DEB4CE8516A6529F0DDB46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2055087800B15D401D0AEE8D /* Pods-VampÏr.debug.xcconfig */,
+				728804B17891E87D75F0370F /* Pods-VampÏr.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB6A555868E9845195CFD223 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F52F72B208144C70039DC5B /* Pods_VampI_r.framework */,
+				42FBB172F3D0FA6B4C6350C1 /* Pods_VampI_r.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F52F6FD2080F2710039DC5B /* VampÏr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F52F7132080F2730039DC5B /* Build configuration list for PBXNativeTarget "VampÏr" */;
+			buildPhases = (
+				B408ED4D7600A39CD408EC11 /* [CP] Check Pods Manifest.lock */,
+				1F52F6FA2080F2710039DC5B /* Sources */,
+				1F52F6FB2080F2710039DC5B /* Frameworks */,
+				1F52F6FC2080F2710039DC5B /* Resources */,
+				705D3D886FB25F629C87D1C5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VampÏr";
+			productName = "VampÏr";
+			productReference = 1F52F6FE2080F2710039DC5B /* VampÏr.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F52F6F62080F2710039DC5B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Spencer Crow";
+				TargetAttributes = {
+					1F52F6FD2080F2710039DC5B = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 1F52F6F92080F2710039DC5B /* Build configuration list for PBXProject "VampÏr" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F52F6F52080F2710039DC5B;
+			productRefGroup = 1F52F6FF2080F2710039DC5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F52F6FD2080F2710039DC5B /* VampÏr */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F52F6FC2080F2710039DC5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F52F71D2081042B0039DC5B /* vampir-full-logo.png in Resources */,
+				1F52F70F2080F2730039DC5B /* LaunchScreen.storyboard in Resources */,
+				1F52F70C2080F2730039DC5B /* Assets.xcassets in Resources */,
+				1F52F7072080F2710039DC5B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		705D3D886FB25F629C87D1C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VampÏr/Pods-VampÏr-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VampÏr/Pods-VampÏr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B408ED4D7600A39CD408EC11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VampÏr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F52F6FA2080F2710039DC5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F52F72120811E700039DC5B /* DexSignInVC.swift in Sources */,
+				1F52F7192080F6D00039DC5B /* SignUpVC.swift in Sources */,
+				1F52F7042080F2710039DC5B /* ViewController.swift in Sources */,
+				1F52F723208123CF0039DC5B /* Extensions.swift in Sources */,
+				1F52F71F2081147C0039DC5B /* LinkVC.swift in Sources */,
+				1F52F7022080F2710039DC5B /* AppDelegate.swift in Sources */,
+				1F52F70A2080F2710039DC5B /* VampI_r.xcdatamodeld in Sources */,
+				1F52F726208131E40039DC5B /* GraphVC.swift in Sources */,
+				1F52F71B2080F72A0039DC5B /* LoginVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F52F7052080F2710039DC5B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F52F7062080F2710039DC5B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F52F70D2080F2730039DC5B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F52F70E2080F2730039DC5B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F52F7112080F2730039DC5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1F52F7122080F2730039DC5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F52F7142080F2730039DC5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2055087800B15D401D0AEE8D /* Pods-VampÏr.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4UB5YY75RQ;
+				INFOPLIST_FILE = "VampÏr/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CrowStudios.VampI-r";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F52F7152080F2730039DC5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 728804B17891E87D75F0370F /* Pods-VampÏr.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4UB5YY75RQ;
+				INFOPLIST_FILE = "VampÏr/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CrowStudios.VampI-r";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F52F6F92080F2710039DC5B /* Build configuration list for PBXProject "VampÏr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F52F7112080F2730039DC5B /* Debug */,
+				1F52F7122080F2730039DC5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F52F7132080F2730039DC5B /* Build configuration list for PBXNativeTarget "VampÏr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F52F7142080F2730039DC5B /* Debug */,
+				1F52F7152080F2730039DC5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1F52F7082080F2710039DC5B /* VampI_r.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1F52F7092080F2710039DC5B /* VampI_r.xcdatamodel */,
+			);
+			currentVersion = 1F52F7092080F2710039DC5B /* VampI_r.xcdatamodel */;
+			path = VampI_r.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1F52F6F62080F2710039DC5B /* Project object */;
+}
