@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var lblUser: UITextField!
+    @IBOutlet weak var lblPass: UITextField!
+    @IBAction func btnLogin(_ sender: Any) {
+        login()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,7 +37,15 @@ class LoginVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func login() {
+        let parameters = ["username":lblUser.text,"password":lblPass.text]
+        NetworkCallManager.baseURLRequest(urlString: Endpoints.base + Endpoints.token, parameters: parameters, method: .post, completion: {json in
+            let map = Map(mappingType: MappingType.fromJSON, JSON: json)
+            let token = Token(map: map)
+            UserDefaults.standard.set(token!.token, forKey: "token")
+            self.performSegue(withIdentifier: "Login", sender: self)
+        }, errorHandler: {_ in})
+    }
     /*
     // MARK: - Navigation
 

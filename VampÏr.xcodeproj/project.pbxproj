@@ -20,7 +20,11 @@
 		1F52F72120811E700039DC5B /* DexSignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52F72020811E700039DC5B /* DexSignInVC.swift */; };
 		1F52F723208123CF0039DC5B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52F722208123CF0039DC5B /* Extensions.swift */; };
 		1F52F726208131E40039DC5B /* GraphVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52F725208131E40039DC5B /* GraphVC.swift */; };
-		1F52F72C208144C70039DC5B /* Pods_VampI_r.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F52F72B208144C70039DC5B /* Pods_VampI_r.framework */; };
+		1F52F73020816BB20039DC5B /* Pods_VampI_r.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FBB172F3D0FA6B4C6350C1 /* Pods_VampI_r.framework */; };
+		1F52F732208176130039DC5B /* NetworkCallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52F731208176130039DC5B /* NetworkCallManager.swift */; };
+		1F52F7342081780A0039DC5B /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52F7332081780A0039DC5B /* Endpoints.swift */; };
+		1F52F73620817BB10039DC5B /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52F73520817BB10039DC5B /* Models.swift */; };
+		D00E01A810EF6C5D68F0F979 /* Pods_VampI_r.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F52F72B208144C70039DC5B /* Pods_VampI_r.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,9 @@
 		1F52F725208131E40039DC5B /* GraphVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphVC.swift; sourceTree = "<group>"; };
 		1F52F727208144460039DC5B /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F52F72B208144C70039DC5B /* Pods_VampI_r.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_VampI_r.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F52F731208176130039DC5B /* NetworkCallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCallManager.swift; sourceTree = "<group>"; };
+		1F52F7332081780A0039DC5B /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		1F52F73520817BB10039DC5B /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		2055087800B15D401D0AEE8D /* Pods-VampÏr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VampÏr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VampÏr/Pods-VampÏr.debug.xcconfig"; sourceTree = "<group>"; };
 		42FBB172F3D0FA6B4C6350C1 /* Pods_VampI_r.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VampI_r.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		728804B17891E87D75F0370F /* Pods-VampÏr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VampÏr.release.xcconfig"; path = "Pods/Target Support Files/Pods-VampÏr/Pods-VampÏr.release.xcconfig"; sourceTree = "<group>"; };
@@ -51,7 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F52F72C208144C70039DC5B /* Pods_VampI_r.framework in Frameworks */,
+				1F52F73020816BB20039DC5B /* Pods_VampI_r.framework in Frameworks */,
+				D00E01A810EF6C5D68F0F979 /* Pods_VampI_r.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +94,10 @@
 				1F52F70B2080F2730039DC5B /* Assets.xcassets */,
 				1F52F71C2081042B0039DC5B /* vampir-full-logo.png */,
 				1F52F70D2080F2730039DC5B /* LaunchScreen.storyboard */,
+				1F52F731208176130039DC5B /* NetworkCallManager.swift */,
 				1F52F722208123CF0039DC5B /* Extensions.swift */,
+				1F52F7332081780A0039DC5B /* Endpoints.swift */,
+				1F52F73520817BB10039DC5B /* Models.swift */,
 				1F52F7102080F2730039DC5B /* Info.plist */,
 				1F52F7082080F2710039DC5B /* VampI_r.xcdatamodeld */,
 				1F52F724208131BA0039DC5B /* ViewControllers */,
@@ -201,11 +212,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VampÏr/Pods-VampÏr-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -237,8 +254,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F52F732208176130039DC5B /* NetworkCallManager.swift in Sources */,
 				1F52F72120811E700039DC5B /* DexSignInVC.swift in Sources */,
 				1F52F7192080F6D00039DC5B /* SignUpVC.swift in Sources */,
+				1F52F73620817BB10039DC5B /* Models.swift in Sources */,
 				1F52F7042080F2710039DC5B /* ViewController.swift in Sources */,
 				1F52F723208123CF0039DC5B /* Extensions.swift in Sources */,
 				1F52F71F2081147C0039DC5B /* LinkVC.swift in Sources */,
@@ -246,6 +265,7 @@
 				1F52F70A2080F2710039DC5B /* VampI_r.xcdatamodeld in Sources */,
 				1F52F726208131E40039DC5B /* GraphVC.swift in Sources */,
 				1F52F71B2080F72A0039DC5B /* LoginVC.swift in Sources */,
+				1F52F7342081780A0039DC5B /* Endpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

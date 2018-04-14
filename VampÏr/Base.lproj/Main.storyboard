@@ -63,7 +63,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="IiB-NI-YMW" kind="show" id="i1R-eF-FWy"/>
+                                                    <action selector="btnSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rFL-N7-Fa7"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCW-o1-owW">
@@ -108,6 +108,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <size key="freeformSize" width="375" height="800"/>
+                    <connections>
+                        <outlet property="lblPass" destination="c9s-Ve-mWl" id="c7W-cS-IHC"/>
+                        <outlet property="lblPassConfirm" destination="udF-ut-Srj" id="TDz-G1-Fs3"/>
+                        <outlet property="lblUsername" destination="u9E-7i-5Vp" id="0da-cu-tGY"/>
+                        <segue destination="IiB-NI-YMW" kind="show" identifier="SignIn" id="7eA-kQ-PJv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,7 +157,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="IiB-NI-YMW" kind="show" id="8XK-XE-yVL"/>
+                                            <action selector="btnLogin:" destination="9ee-g8-dH8" eventType="touchUpInside" id="oD4-8k-weL"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WS-aS-uss">
@@ -192,6 +198,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mC6-21-uXu"/>
                     </view>
+                    <connections>
+                        <outlet property="lblPass" destination="58b-RM-Mg3" id="NMS-3P-jsj"/>
+                        <outlet property="lblUser" destination="1SE-7w-7zZ" id="mVA-2b-4VW"/>
+                        <segue destination="IiB-NI-YMW" kind="show" identifier="Login" id="eaM-6N-lxM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Zh-iS-0nR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -355,6 +366,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="btnLogin:" destination="F1s-rV-MpM" eventType="touchUpInside" id="kBa-Ym-nT6"/>
                                     <segue destination="IiB-NI-YMW" kind="show" identifier="Dexcom" id="J66-cR-pa3"/>
                                 </connections>
                             </button>
@@ -370,6 +382,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s0S-Gc-doa"/>
                     </view>
+                    <connections>
+                        <outlet property="lblPass" destination="aVt-eJ-US4" id="e2m-Vg-qsX"/>
+                        <outlet property="lblUser" destination="7zE-Od-Bnd" id="IeH-gL-P8k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TqV-vi-sQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -380,6 +396,6 @@
         <image name="vampir-full-logo.png" width="1" height="1"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="i1R-eF-FWy"/>
+        <segue reference="eaM-6N-lxM"/>
     </inferredMetricsTieBreakers>
 </document>

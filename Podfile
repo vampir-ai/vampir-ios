@@ -7,4 +7,6 @@ target 'VampÏr' do
 
   # Pods for VampÏr
 pod 'Charts'
+pod 'Alamofire'
+pod 'AlamofireObjectMapper'
 end

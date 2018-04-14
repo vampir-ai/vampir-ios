@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class DexSignInVC: UIViewController {
     
+    @IBOutlet weak var lblUser: UITextField!
+    @IBOutlet weak var lblPass: UITextField!
+    
+    @IBAction func btnLogin(_ sender: Any) {
+        login()
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vcc = segue.destination as? LinkVC {
             vcc.realLink = true
@@ -36,6 +43,18 @@ class DexSignInVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func login() {
+        let parameters = ["username":lblUser.text,"password":lblPass.text]
+        NetworkCallManager.baseURLRequest(urlString: Endpoints.base + Endpoints.encrypt, parameters: parameters, method: .post, completion: {json in
+            let map = Map(mappingType: MappingType.fromJSON, JSON: json)
+            let message = Message(map: map)
+            UserDefaults.standard.set(message!.message, forKey: "message")
+        }, errorHandler: {_ in
+            //error modal
+            //remove
+            fatalError()
+        })
+    }
 
     /*
     // MARK: - Navigation

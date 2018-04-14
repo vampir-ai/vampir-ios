@@ -7,9 +7,25 @@
 //
 
 import UIKit
+import ObjectMapper
+
 
 class SignUpVC: UIViewController {
 
+
+    @IBOutlet weak var lblPassConfirm: UITextField!
+    @IBOutlet weak var lblPass: UITextField!
+    @IBOutlet weak var lblUsername: UITextField!
+    
+    @IBAction func btnSignUp(_ sender: Any) {
+        if lblPass.text == lblPassConfirm.text {
+            createAccount()
+            
+        } else {
+            lblPass.text = ""
+            lblPassConfirm.text = ""
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +45,24 @@ class SignUpVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func createAccount(){
+        let parameters = ["username":lblUsername.text,"password":lblPass.text]
+        NetworkCallManager.baseURLRequest(urlString: Endpoints.base + Endpoints.signUp, parameters: parameters, method: .post, completion: {_ in
+            self.login()
+        
+        }, errorHandler: {_ in})
+    }
 
+    func login() {
+        let parameters = ["username":lblUsername.text,"password":lblPass.text]
+        NetworkCallManager.baseURLRequest(urlString: Endpoints.base + Endpoints.token, parameters: parameters, method: .post, completion: {json in
+            let map = Map(mappingType: MappingType.fromJSON, JSON: json)
+            let token = Token(map: map)
+            UserDefaults.standard.set(token!.token, forKey: "token")
+            self.performSegue(withIdentifier: "SignIn", sender: self)
+        }, errorHandler: {_ in})
+        
+    }
     /*
     // MARK: - Navigation
 

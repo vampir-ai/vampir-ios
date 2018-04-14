@@ -8,7 +8,7 @@
 
 import UIKit
 import Charts
-
+import ObjectMapper
 class GraphVC: UIViewController {
 
     @IBOutlet weak var lineChartView: LineChartView!
@@ -18,10 +18,16 @@ class GraphVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        minutes = [0, 5, 10, 15, 20]
-        let readings:[Double] = [100, 110, 100, 95, 85]
+        let json = ["message":UserDefaults.standard.object(forKey: "message") as! String]
+        NetworkCallManager.baseURLRequest(urlString: Endpoints.base + Endpoints.predict, parameters: json, method: .post, completion: {value in
+            print("complete")
+        }, errorHandler: {_ in})
         
-        setChart(dataPoints: minutes, values: readings)
+
+        //minutes = [0, 5, 10, 15, 20]
+        //let readings:[Double] = [100, 110, 100, 95, 85]
+        
+        //setChart(dataPoints: minutes, values: readings)
         
         
     }
