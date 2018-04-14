@@ -23,8 +23,9 @@ class LoginVC: UIViewController {
         // Do any additional setup after loading the view.
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(SignUpVC.dismissKeyboard))
-        
         view.addGestureRecognizer(tap)
+        
+        
     }
     
     @objc func dismissKeyboard() {

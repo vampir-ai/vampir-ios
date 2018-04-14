@@ -33,7 +33,16 @@ class SignUpVC: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(SignUpVC.dismissKeyboard))
             
             view.addGestureRecognizer(tap)
+
         }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        if UserDefaults.standard.object(forKey: "token") != nil{
+            self.performSegue(withIdentifier: "SignIn", sender: self)
+        }
+    }
+
     
     @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.

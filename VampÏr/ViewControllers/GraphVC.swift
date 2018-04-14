@@ -18,18 +18,20 @@ class GraphVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let json = ["message":UserDefaults.standard.object(forKey: "message") as! String]
-        NetworkCallManager.baseURLRequest(urlString: Endpoints.base + Endpoints.predict, parameters: json, method: .post, completion: {value in
-            print("complete")
-        }, errorHandler: {_ in})
-        
+        let hour = Calendar.current.component(.hour, from: Date())
+        let parameters = ["message":UserDefaults.standard.object(forKey: "message") as! String,"hour":hour] as [String : Any]
+        var readings:[Double]?
+        let minutes = [0.0, 5.0, 10.0, 15.0]
+        NetworkCallManager.baseURLRequest(urlString: Endpoints.base + Endpoints.predict, parameters: parameters, method: .post, completion: {json in
+            let map = Map(mappingType: MappingType.fromJSON, JSON: json)
+            let prediction = Prediction(map: map)
+            readings = prediction?.prediction
+            self.setChart(dataPoints: minutes, values: readings!)
+        }, errorHandler: {_ in
+            UserDefaults.standard.set(nil, forKey: "message")
+            self.performSegue(withIdentifier: "Failed", sender: self)
+        })
 
-        //minutes = [0, 5, 10, 15, 20]
-        //let readings:[Double] = [100, 110, 100, 95, 85]
-        
-        //setChart(dataPoints: minutes, values: readings)
-        
-        
     }
 
     func setChart(dataPoints: [Double], values: [Double]) {

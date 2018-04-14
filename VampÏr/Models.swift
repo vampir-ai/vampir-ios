@@ -21,7 +21,7 @@ final class Login:Mappable{
     }
     
 }
-final class User{
+final class User:Mappable{
     var id:String?
     var username:String?
     var firstName:String?
@@ -41,7 +41,7 @@ final class User{
     }
 }
 
-final class Token{
+final class Token:Mappable{
 
     var token:String?
     required init?(map: Map) {
@@ -53,7 +53,7 @@ final class Token{
     }
 }
 
-final class Message{
+final class Message:Mappable{
     
     var message:String?
     required init?(map: Map) {
@@ -65,12 +65,23 @@ final class Message{
     }
 }
 
-final class SessionId{
+final class SessionId:Mappable{
     var sessionId:String?
     required init?(map: Map) {
         mapping(map: map)
     }
     func mapping(map: Map){
-        self.sessionId <- map["sessionId"]
+        self.sessionId <- map["csrf"]
+    }
+}
+
+final class Prediction:Mappable {
+    var prediction:[Double]?
+    
+    required init?(map: Map) {
+        mapping(map: map)
+    }
+    func mapping(map: Map){
+        self.prediction <- map["predictions"]
     }
 }
