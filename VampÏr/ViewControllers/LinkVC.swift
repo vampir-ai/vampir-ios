@@ -47,6 +47,7 @@ class LinkVC: UIViewController, UIWebViewDelegate {
         // Do any additional setup after loading the view.
         let defaults = UserDefaults.standard
         histLink = defaults.bool(forKey: "hist")
+        histLink = true
         if histLink == true{
             HistCheck.textColor = UIColor.green
         }
