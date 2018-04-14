@@ -16,6 +16,8 @@ class LinkVC: UIViewController, UIWebViewDelegate {
     var sessionId:SessionId?
     @IBOutlet weak var HistCheck: UILabel!
     @IBOutlet weak var RealCheck: UILabel!
+    var webV:UIWebView?
+    var stringId:String?
     @IBAction func btnHist(_ sender: Any) {
         
         let parameters: HTTPHeaders = ["Authorization": UserDefaults.standard.object(forKey: "token") as! String]
@@ -23,11 +25,11 @@ class LinkVC: UIViewController, UIWebViewDelegate {
         NetworkCallManager.baseURLRequest(urlString: Endpoints.base + Endpoints.oauth, parameters:[:], method: .post, header: parameters, completion: {json in
             let map = Map(mappingType: MappingType.fromJSON, JSON: json)
             self.sessionId = SessionId(map: map)
-            let stringId:String? = self.sessionId?.sessionId
-            let webV:UIWebView = UIWebView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-            webV.loadRequest(URLRequest(url: URL(string: "https://api.dexcom.com/v1/oauth2/login?client_id=Nqsx3FAK4N0xLcDvkQH0ACFhuMNS86Rb&redirect_uri=http://vampirai.ryanberger.me/api/oauth&response_type=code&scope=offline_access&state=" + stringId!)!))
-            webV.delegate = self
-            self.view.addSubview(webV)
+            self.stringId = self.sessionId?.sessionId
+            self.webV = UIWebView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+            self.webV?.loadRequest(URLRequest(url: URL(string: "https://api.dexcom.com/v1/oauth2/login?client_id=Nqsx3FAK4N0xLcDvkQH0ACFhuMNS86Rb&redirect_uri=http://vampirai.ryanberger.me/api/oauth&response_type=code&scope=offline_access&state=" + self.stringId!)!))
+            self.webV?.delegate = self
+            self.view.addSubview(self.webV!)
             
         }, errorHandler: {_ in
             UserDefaults.standard.set(nil, forKey: "token")
@@ -71,7 +73,8 @@ class LinkVC: UIViewController, UIWebViewDelegate {
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool{
         if request.url?.absoluteString == "https://api.dexcom.com/v1/oauth2/login?client_id=Nqsx3FAK4N0xLcDvkQH0ACFhuMNS86Rb&redirect_uri=http://vampirai.ryanberger.me/api/oauth&response_type=code&scope=offline_access&state=" + self.sessionId!.sessionId! {
         } else if (request.url?.absoluteString.contains("http://vampirai.ryanberger.me"))!{
-            performSegue(withIdentifier: "login", sender: self)
+            //performSegue(withIdentifier: "login", sender: self)
+            webV?.removeFromSuperview()
         }
         return true
     }

@@ -51,8 +51,6 @@ class DexSignInVC: UIViewController {
             UserDefaults.standard.set(message!.message, forKey: "message")
         }, errorHandler: {_ in
             //error modal
-            //remove
-            fatalError()
         })
     }
 
